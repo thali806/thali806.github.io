@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Sofia Weber</h1>
+        <p>Currículo dinâmico e interativo</p>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre" class="profile-section">
+        <img src="img/foto de perfil.png" alt="Foto de Perfil">
+        <div class="bio">
+            <h2>Sobre Mim</h2>
+            <p>Olá! me chamo Sofia Thalita Weber, estou cursando o 1* ano do Ensino Médio e estou atualmente com 15 anos.
+                 procurei fazer o curso de TI para ter mais opurtunidades no mercado de trabalho e para poder aprender e entender coisas novas:</p>
+            <ul>
+                <li><a href="https://github.com/thali806" target="_blank">Meu GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="habilidades" class="content">
+        <h2>Habilidades</h2>
+        <div class="box">
+            <h3>Linguagens de Programação</h3>
+            <p>HTML, CSS, JavaScript básico, Python</p>
+        </div>
+        
+        <div class="box">
+            <h3>Ferramentas</h3>
+            <p>GitHub, VS Code, visuAlg</p>
+        </div>
+    </section>
+
+    <section id="formacao" class="content">
+        <h2>Formação</h2>
+        <div class="box">
+            <h3>Formação Acadêmica</h3>
+            <p>Cursando o Ensino Médio - Colégio Estadual Dr. Wolfram Metzler</p>
+        </div>
+        <div class="box">
+            <h3>Certificações</h3>
+            <p>Curso TI - Senac RS</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="content">
+        <h2>Projetos</h2>
+        <div class="box">
+            <h3>Site Portfólio</h3>
+            <p>Um portfólio pessoal para exibir minhas habilidades e projetos.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="content">
+        <h2>Contato</h2>
+        <p>Se interessou e deseja entrar em contato? Utilize os meios abaixo:</p>
+        <p><strong>E-mail:</strong> sofiaweber806@gmail.com</p>
+        <p><strong>Telefone:</strong> (51) 99775-5581</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 "A informática é a linguagem do futuro, e eu sou fluente nela." Todos os direitos reservados.</p>
+        <p>Desenvolvido por Sofia Weber</p>
+        <p id="data-hora"></p> <!-- Aqui será exibida a data e hora -->
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const dateTimeString = now.toLocaleString('pt-BR', options);
+            document.getElementById('data-hora').innerText = "Data e Hora: " + dateTimeString;
+        }
+
+        updateDateTime(); // Chama a função para exibir a data e hora ao carregar a página
+        setInterval(updateDateTime, 1000); // Atualiza a cada segundo
+    </script>
+
+</body>
+</html>
